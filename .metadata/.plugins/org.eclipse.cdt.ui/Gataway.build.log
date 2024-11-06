@@ -1,0 +1,47 @@
+09:37:26 **** Incremental Build of configuration Debug for project Gataway ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32L432xx -c -I../Core/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc -I../Drivers/STM32L4xx_HAL_Driver/Inc/Legacy -I../Drivers/CMSIS/Device/ST/STM32L4xx/Include -I../Drivers/CMSIS/Include -I"C:/Users/Ahmet/Desktop/Massage/Gataway/ethernet" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:218:4: warning: implicit declaration of function 'sprintf' [-Wimplicit-function-declaration]
+  218 |    sprintf(ch,"Port=58580>Connected OK!\n");
+      |    ^~~~~~~
+../Core/Src/main.c:29:1: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+   28 | #include <string.h>
+  +++ |+#include <stdio.h>
+   29 | /* USER CODE END Includes */
+../Core/Src/main.c:218:4: warning: incompatible implicit declaration of built-in function 'sprintf' [-Wbuiltin-declaration-mismatch]
+  218 |    sprintf(ch,"Port=58580>Connected OK!\n");
+      |    ^~~~~~~
+../Core/Src/main.c:218:4: note: include '<stdio.h>' or provide a declaration of 'sprintf'
+../Core/Src/main.c:218:12: warning: pointer targets in passing argument 1 of 'sprintf' differ in signedness [-Wpointer-sign]
+  218 |    sprintf(ch,"Port=58580>Connected OK!\n");
+      |            ^~
+      |            |
+      |            uint8_t * {aka unsigned char *}
+../Core/Src/main.c:218:12: note: expected 'char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+../Core/Src/main.c:219:23: warning: pointer targets in passing argument 1 of 'strlen' differ in signedness [-Wpointer-sign]
+  219 |    send(s, ch, strlen(ch));
+      |                       ^~
+      |                       |
+      |                       uint8_t * {aka unsigned char *}
+In file included from ../Core/Src/main.c:28:
+C:\ST\STM32CubeIDE_1.14.0\STM32CubeIDE\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.11.3.rel1.win32_1.1.100.202309141235\tools\bin/../lib/gcc/arm-none-eabi/11.3.1/../../../../arm-none-eabi/include/string.h:41:18: note: expected 'const char *' but argument is of type 'uint8_t *' {aka 'unsigned char *'}
+   41 | size_t   strlen (const char *);
+      |                  ^~~~~~~~~~~~
+../Core/Src/main.c:206:13: warning: unused variable 'kop' [-Wunused-variable]
+  206 |     uint8_t kop;
+      |             ^~~
+arm-none-eabi-gcc -o "Gataway.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\Ahmet\Desktop\Massage\Gataway\STM32L432KCUX_FLASH.ld" --specs=nosys.specs -Wl,-Map="Gataway.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: Gataway.elf
+ 
+arm-none-eabi-size  Gataway.elf 
+arm-none-eabi-objdump -h -S Gataway.elf  > "Gataway.list"
+   text	   data	    bss	    dec	    hex	filename
+  26944	    148	   2684	  29776	   7450	Gataway.elf
+Finished building: default.size.stdout
+ 
+Finished building: Gataway.list
+ 
+
+09:37:27 Build Finished. 0 errors, 5 warnings. (took 596ms)
+

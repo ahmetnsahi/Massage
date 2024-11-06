@@ -1,0 +1,7 @@
+../Core/Src/Programs.c:72:6:pinit	8	static
+../Core/Src/Programs.c:98:6:Pwm_Start	24	static
+../Core/Src/Programs.c:129:5:selectProgram	24	static
+../Core/Src/Programs.c:161:14:prgSel	56	static
+../Core/Src/Programs.c:184:10:Stop_Full	16	static
+../Core/Src/Programs.c:207:6:program	72	static
+../Core/Src/Programs.c:277:6:standartprogram	48	static

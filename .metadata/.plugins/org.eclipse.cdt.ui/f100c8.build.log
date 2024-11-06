@@ -1,0 +1,159 @@
+23:31:28 **** Build of configuration Debug for project f100c8 ****
+make -j24 all 
+arm-none-eabi-gcc "../Core/Src/Programs.c" -mcpu=cortex-m3 -std=gnu11 -g3 -DDEBUG -DUSE_HAL_DRIVER -DSTM32F100xB -c -I../Core/Inc -I../Drivers/STM32F1xx_HAL_Driver/Inc/Legacy -I../Drivers/STM32F1xx_HAL_Driver/Inc -I../Drivers/CMSIS/Device/ST/STM32F1xx/Include -I../Drivers/CMSIS/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -fcyclomatic-complexity -MMD -MP -MF"Core/Src/Programs.d" -MT"Core/Src/Programs.o" --specs=nano.specs -mfloat-abi=soft -mthumb -o "Core/Src/Programs.o"
+In file included from ../Core/Src/Programs.c:7:
+../Core/Inc/Programs.h:18:1: warning: useless storage class specifier in empty declaration
+   18 | };
+      | ^
+../Core/Src/Programs.c:22:8: warning: type defaults to 'int' in declaration of 'start' [-Wimplicit-int]
+   22 | extern start;
+      |        ^~~~~
+../Core/Src/Programs.c: In function 'pinit':
+../Core/Src/Programs.c:75:23: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   75 |           M[1].Channel=TIM_CHANNEL_2;  M[1].Duty=0;   M[1].Tımer=htim1;
+      |                       ^
+../Core/Src/Programs.c:76:23: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   76 |           M[2].Channel=TIM_CHANNEL_3;  M[2].Duty=0;   M[2].Tımer=htim1;
+      |                       ^
+../Core/Src/Programs.c:77:23: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   77 |           M[3].Channel=TIM_CHANNEL_4;  M[3].Duty=0;   M[3].Tımer=htim1;//
+      |                       ^
+../Core/Src/Programs.c:81:23: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   81 |           M[5].Channel=TIM_CHANNEL_2;  M[5].Duty=0;   M[5].Tımer=htim3;//
+      |                       ^
+../Core/Src/Programs.c:82:23: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   82 |           M[6].Channel=TIM_CHANNEL_3;  M[6].Duty=0;   M[6].Tımer=htim4;
+      |                       ^
+../Core/Src/Programs.c:83:23: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   83 |           M[7].Channel=TIM_CHANNEL_4;  M[7].Duty=0;   M[7].Tımer=htim4;
+      |                       ^
+../Core/Src/Programs.c:87:23: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   87 |           M[9].Channel=TIM_CHANNEL_4;  M[9].Duty=0;   M[9].Tımer=htim2;
+      |                       ^
+../Core/Src/Programs.c:88:24: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   88 |           M[10].Channel=TIM_CHANNEL_3; M[10].Duty=0;  M[10].Tımer=htim2;
+      |                        ^
+../Core/Src/Programs.c:89:24: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   89 |           M[11].Channel=TIM_CHANNEL_4; M[11].Duty=0;  M[11].Tımer=htim3;
+      |                        ^
+../Core/Src/Programs.c:91:24: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   91 |           M[12].Channel=TIM_CHANNEL_3; M[12].Duty=0;  M[12].Tımer=htim3;
+      |                        ^
+../Core/Src/Programs.c:93:24: warning: assignment to 'uint32_t *' {aka 'long unsigned int *'} from 'unsigned int' makes pointer from integer without a cast [-Wint-conversion]
+   93 |           M[14].Channel=TIM_CHANNEL_2; M[14].Duty=0;  M[14].Tımer=htim2;
+      |                        ^
+../Core/Src/Programs.c: In function 'Pwm_Start':
+../Core/Src/Programs.c:107:44: warning: assignment to 'uint16_t *' {aka 'short unsigned int *'} from 'uint16_t' {aka 'short unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+  107 |                                 M[var].Duty=Ms.MotorDuty;
+      |                                            ^
+../Core/Src/Programs.c:109:44: warning: assignment to 'uint16_t *' {aka 'short unsigned int *'} from 'uint16_t' {aka 'short unsigned int'} makes pointer from integer without a cast [-Wint-conversion]
+  109 |                                 M[var].Duty=Ms.TempDuty;
+      |                                            ^
+In file included from ../Core/Inc/stm32f1xx_hal_conf.h:334,
+                 from ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h:29,
+                 from ../Core/Inc/main.h:30,
+                 from ../Core/Inc/Programs.h:11,
+                 from ../Core/Src/Programs.c:7:
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1396:69: warning: assignment to 'uint32_t' {aka 'long unsigned int'} from 'uint16_t *' {aka 'short unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+ 1396 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                                                     ^
+../Core/Src/Programs.c:112:20: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+  112 |                    __HAL_TIM_SET_COMPARE(&M[var].Tımer,M[var].Channel,M[var].Duty);
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1397:19: warning: comparison between pointer and integer
+ 1397 |    ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCR2 = (__COMPARE__)) :\
+      |                   ^~
+../Core/Src/Programs.c:112:20: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+  112 |                    __HAL_TIM_SET_COMPARE(&M[var].Tımer,M[var].Channel,M[var].Duty);
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1397:69: warning: assignment to 'uint32_t' {aka 'long unsigned int'} from 'uint16_t *' {aka 'short unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+ 1397 |    ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCR2 = (__COMPARE__)) :\
+      |                                                                     ^
+../Core/Src/Programs.c:112:20: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+  112 |                    __HAL_TIM_SET_COMPARE(&M[var].Tımer,M[var].Channel,M[var].Duty);
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1398:19: warning: comparison between pointer and integer
+ 1398 |    ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCR3 = (__COMPARE__)) :\
+      |                   ^~
+../Core/Src/Programs.c:112:20: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+  112 |                    __HAL_TIM_SET_COMPARE(&M[var].Tımer,M[var].Channel,M[var].Duty);
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1398:69: warning: assignment to 'uint32_t' {aka 'long unsigned int'} from 'uint16_t *' {aka 'short unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+ 1398 |    ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCR3 = (__COMPARE__)) :\
+      |                                                                     ^
+../Core/Src/Programs.c:112:20: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+  112 |                    __HAL_TIM_SET_COMPARE(&M[var].Tımer,M[var].Channel,M[var].Duty);
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1399:34: warning: assignment to 'uint32_t' {aka 'long unsigned int'} from 'uint16_t *' {aka 'short unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+ 1399 |    ((__HANDLE__)->Instance->CCR4 = (__COMPARE__)))
+      |                                  ^
+../Core/Src/Programs.c:112:20: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+  112 |                    __HAL_TIM_SET_COMPARE(&M[var].Tımer,M[var].Channel,M[var].Duty);
+      |                    ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1396:69: warning: assignment to 'uint32_t' {aka 'long unsigned int'} from 'uint16_t *' {aka 'short unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+ 1396 |   (((__CHANNEL__) == TIM_CHANNEL_1) ? ((__HANDLE__)->Instance->CCR1 = (__COMPARE__)) :\
+      |                                                                     ^
+../Core/Src/Programs.c:118:19: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+  118 |                   __HAL_TIM_SET_COMPARE(&M[var].Tımer,M[var].Channel,M[var].Duty);
+      |                   ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1397:19: warning: comparison between pointer and integer
+ 1397 |    ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCR2 = (__COMPARE__)) :\
+      |                   ^~
+../Core/Src/Programs.c:118:19: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+  118 |                   __HAL_TIM_SET_COMPARE(&M[var].Tımer,M[var].Channel,M[var].Duty);
+      |                   ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1397:69: warning: assignment to 'uint32_t' {aka 'long unsigned int'} from 'uint16_t *' {aka 'short unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+ 1397 |    ((__CHANNEL__) == TIM_CHANNEL_2) ? ((__HANDLE__)->Instance->CCR2 = (__COMPARE__)) :\
+      |                                                                     ^
+../Core/Src/Programs.c:118:19: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+  118 |                   __HAL_TIM_SET_COMPARE(&M[var].Tımer,M[var].Channel,M[var].Duty);
+      |                   ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1398:19: warning: comparison between pointer and integer
+ 1398 |    ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCR3 = (__COMPARE__)) :\
+      |                   ^~
+../Core/Src/Programs.c:118:19: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+  118 |                   __HAL_TIM_SET_COMPARE(&M[var].Tımer,M[var].Channel,M[var].Duty);
+      |                   ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1398:69: warning: assignment to 'uint32_t' {aka 'long unsigned int'} from 'uint16_t *' {aka 'short unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+ 1398 |    ((__CHANNEL__) == TIM_CHANNEL_3) ? ((__HANDLE__)->Instance->CCR3 = (__COMPARE__)) :\
+      |                                                                     ^
+../Core/Src/Programs.c:118:19: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+  118 |                   __HAL_TIM_SET_COMPARE(&M[var].Tımer,M[var].Channel,M[var].Duty);
+      |                   ^~~~~~~~~~~~~~~~~~~~~
+../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h:1399:34: warning: assignment to 'uint32_t' {aka 'long unsigned int'} from 'uint16_t *' {aka 'short unsigned int *'} makes integer from pointer without a cast [-Wint-conversion]
+ 1399 |    ((__HANDLE__)->Instance->CCR4 = (__COMPARE__)))
+      |                                  ^
+../Core/Src/Programs.c:118:19: note: in expansion of macro '__HAL_TIM_SET_COMPARE'
+  118 |                   __HAL_TIM_SET_COMPARE(&M[var].Tımer,M[var].Channel,M[var].Duty);
+      |                   ^~~~~~~~~~~~~~~~~~~~~
+../Core/Src/Programs.c: In function 'program':
+../Core/Src/Programs.c:236:35: warning: format '%d' expects argument of type 'int', but argument 2 has type 'uint32_t' {aka 'long unsigned int'} [-Wformat=]
+  236 |    printf("Birim program zamani =%d\n\r",prg_time);
+      |                                  ~^      ~~~~~~~~
+      |                                   |      |
+      |                                   int    uint32_t {aka long unsigned int}
+      |                                  %ld
+../Core/Src/Programs.c: In function 'standartprogram':
+../Core/Src/Programs.c:320:41: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+  320 |                          if (Stop_Full()==1 | start==0) { //prg çalışırken durdurma
+      |                              ~~~~~~~~~~~^~~
+../Core/Src/Programs.c:381:43: warning: suggest parentheses around comparison in operand of '|' [-Wparentheses]
+  381 |                            if (Stop_Full()==1 | start==0) { //prg çalışırken durdurma
+      |                                ~~~~~~~~~~~^~~
+../Core/Src/Programs.c:291:21: warning: label 'stop1' defined but not used [-Wunused-label]
+  291 |                     stop1:
+      |                     ^~~~~
+arm-none-eabi-gcc -o "f100c8.elf" @"objects.list"   -mcpu=cortex-m3 -T"C:\Users\Ahmet\Desktop\Massage\f100c8\STM32F100C8TX_FLASH.ld" --specs=nosys.specs -Wl,-Map="f100c8.map" -Wl,--gc-sections -static --specs=nano.specs -mfloat-abi=soft -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: f100c8.elf
+ 
+arm-none-eabi-size  f100c8.elf 
+arm-none-eabi-objdump -h -S f100c8.elf  > "f100c8.list"
+   text	   data	    bss	    dec	    hex	filename
+  30728	    272	   4152	  35152	   8950	f100c8.elf
+Finished building: default.size.stdout
+ 
+Finished building: f100c8.list
+ 
+
+23:31:31 Build Finished. 0 errors, 31 warnings. (took 2s.843ms)
+
